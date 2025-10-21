@@ -1,4 +1,9 @@
-document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+const form = document.getElementById("feedbackForm");
+const summary = document.getElementById("summary");
+const summaryText = document.getElementById("summaryText");
+const backBtn = document.getElementById("backBtn");
+
+form.addEventListener("submit", function(event) {
   event.preventDefault();
 
   const name = document.getElementById("name").value.trim();
@@ -7,18 +12,23 @@ document.getElementById("feedbackForm").addEventListener("submit", function(even
   const comments = document.getElementById("comments").value.trim();
 
   if (!name || !email || !rating || !comments) {
-    alert("Please fill in all fields before submitting.");
+    alert("Please fill all the fields.");
     return;
   }
 
-  const summaryText = `
-    Name: ${name} <br>
-    Email: ${email} <br>
-    Rating: ${rating} <br>
-    Comments: ${comments}
+  summaryText.innerHTML = `
+    <strong>Name:</strong> ${name}<br>
+    <strong>Email:</strong> ${email}<br>
+    <strong>Rating:</strong> ${rating}<br>
+    <strong>Comments:</strong> ${comments}
   `;
 
-  document.getElementById("feedbackForm").classList.add("hidden");
-  document.getElementById("summaryText").innerHTML = summaryText;
-  document.getElementById("summary").classList.remove("hidden");
+  form.classList.add("hidden");
+  summary.classList.remove("hidden");
+});
+
+backBtn.addEventListener("click", function() {
+  summary.classList.add("hidden");
+  form.classList.remove("hidden");
+  form.reset();
 });
