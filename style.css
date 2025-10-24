@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #eef4ff;
+  background-color: #f4f7f8;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,11 +9,11 @@ body {
 }
 
 .container {
-  background-color: white;
-  padding: 25px;
-  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 20px 25px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
   width: 320px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 h2, h3 {
@@ -21,37 +21,43 @@ h2, h3 {
   color: #333;
 }
 
-label {
-  display: block;
-  margin: 10px 0 5px;
+form, #thankYouMessage {
+  display: flex;
+  flex-direction: column;
 }
 
-input, select, textarea {
-  width: 100%;
+label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #555;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
   padding: 8px;
-  border: 1px solid #aaa;
+  font-size: 14px;
+  border: 1px solid #ccc;
   border-radius: 5px;
 }
 
 button {
-  width: 100%;
+  margin-top: 20px;
   padding: 10px;
-  background-color: #4a90e2;
+  background-color: #5c97df;
   color: white;
   border: none;
   border-radius: 5px;
-  margin-top: 10px;
   cursor: pointer;
+  font-size: 16px;
 }
 
 button:hover {
-  background-color: #3c7aca;
+  background-color: #4a7ac9;
 }
 
 .hidden {
   display: none;
-}
-
-#summary {
-  text-align: center;
 }
