@@ -8,15 +8,15 @@
 </head>
 <body>
   <div class="container">
-    <h2>Student Feedback Form</h2>
+    <h2>Feedback Form</h2>
     <form id="feedbackForm">
       <label for="name">Name:</label>
-      <input type="text" id="name" placeholder="Enter your name" required>
+      <input type="text" id="name" required>
 
       <label for="email">Email:</label>
-      <input type="email" id="email" placeholder="Enter your email" required>
+      <input type="email" id="email" required>
 
-      <label for="rating">Rate our course:</label>
+      <label for="rating">Rating:</label>
       <select id="rating" required>
         <option value="">Select</option>
         <option value="Excellent">Excellent</option>
@@ -25,8 +25,8 @@
         <option value="Poor">Poor</option>
       </select>
 
-      <label for="comments">Your Comments:</label>
-      <textarea id="comments" rows="4" placeholder="Write your feedback..." required></textarea>
+      <label for="comments">Comments:</label>
+      <textarea id="comments" rows="4" placeholder="Your feedback..." required></textarea>
 
       <button type="submit">Submit</button>
     </form>
@@ -34,9 +34,9 @@
     <div id="summary" class="hidden">
       <h3>Thank You for Your Feedback!</h3>
       <p id="summaryText"></p>
-      <button id="backBtn">Go Back</button>
     </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
